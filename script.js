@@ -54,7 +54,7 @@ function Book(title,author,pages,read){
         //Create read status button and add class attribute for each array card
         const readStatusButton = document.createElement("button");
         readStatusButton.classList.add("read-status-button");
-        readStatusButton.textContent = "Toggle Read Status";
+        readStatusButton.textContent = "Read Status";
 
         //Link the data attribute of thr toggle read button to the array and card
         readStatusButton.dataset.linkedArray = index;
@@ -79,22 +79,13 @@ function Book(title,author,pages,read){
             displayBooksOnPage();
         }
         //Loop over the object keys and values and display to each card
-        for(let key in myLibrary){
-            console.log(`${key}: ${myLibrary[key]}`);
+        for(let key in myLibraries){
             const para = document.createElement("p");
-            para.textContent = (`${key}: ${myLibrary[key]}`);
+            para.textContent = (`${key}: ${myLibraries[key]}`);
             card.appendChild(para);
         }
         index++;
     })
-  }
-
-  //Start event Listener/display form to add a new bok to library
-  const addBookButton = document.querySelector(".add-book-button");
-  addBookButton.addEventListener("click", displayTheForm);
-
-  function displayTheForm(){
-    document.getElementById("add-book-form").style.display = block;
   }
 
   //Start event listener/ add input to array for new entry form

@@ -1,23 +1,28 @@
+body, html{
+    margin: 0;
+}
 .container{
-    border-style: groove;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: .1fr;
     text-align: center;
     min-height: 100vh;
-}
-
-.form-heading{
-    border-style: groove;
+    margin: 0;
 }
 
 .books-heading{
-    border-style: groove;
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: rgba(99,99,99, 0.2) 0px 2px 8px -2px;
+}
+
+.books-heading button{
+    margin-right: 1em;
 }
 
 .books{
-    background-color: aliceblue;
-    border-style: groove;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column: 2 / 3;
@@ -28,10 +33,26 @@
 }
 
 .books .card {
-    background-color: antiquewhite;
-    color: black;
     text-align: center;
     height: 300px;
     width: 300px;
     display: grid;
 }
+
+.form{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    box-shadow: rgba(99,99,99, 0.2) 0px 2px 8px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form div{
+    margin-bottom: 3em;
+}
+
+.input{
+    font-size: 1.2em;
+}
+
